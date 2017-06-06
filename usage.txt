@@ -1,0 +1,8 @@
+python multibrute.py -service [enter service here] -user [enter username here] -wlist [enter wordlist here] -delay [enter delay here]
+
+services:
+facebook
+steam 
+instagram
+twitter
+[more coming soom as this is work in progress]
