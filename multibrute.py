@@ -65,71 +65,7 @@ def main():
         print ""
     sleep(0.5)
 
-    if service == 'ssh':
-        if address is None:
-            print R + "[!] You need to provide a SSH address for cracking! [!]" + W
-            exit()
-        print C + "[*] Address: %s" % address + W
-        sleep(0.5)
-
-        if port is None:
-            print O + "[?] Port not set. Automatically set to 22 for you [?]" + W
-            port = 22
-
-        print C + "[*] Port: %s "  % port + W
-        sleep(1)
-        print P + "[*] Starting dictionary attack! [*]" + W
-        print "Using %s seconds of delay. Default is 1 second" % delay
-
-        sshBruteforce(address, username, wordlist, port, delay)
-        call(["rm", "filename.log"])
-
-    elif service == 'ftp':
-        if address is None:
-            print R + "[!] You need to provide a FTP address for cracking! [!]" + W
-        print C + "[*] Address: %s" % address + W
-        sleep(0.5)
-        if port is None:
-            print O + "[?] Port not set. Automatically set to 21 for you [?]" + W
-            port = 21
-        print C + "[*] Port: %s "  % port + W
-        sleep(1)
-        print P + "[*] Starting dictionary attack! [*]" + W
-        print "Using %s seconds of delay. Default is 1 second" % delay
-        ftpBruteforce(address, username, wordlist, delay, port)
-
-    elif service == 'smtp':
-        if address is None:
-            print R + "You need to provide an SMTP server address for cracking! [!]" + W
-            print O + "| Gmail: smtp.gmail.com |\n| Outlook: smtp.live.com |\n| Yahoo Mail: smtp.mail.yahoo.com |\n| AOL: smtp.aol.com | " + W
-        print C + "SMTP server: %s" % address + W
-        sleep(0.5)
-        if port is None:
-            print O + "Port not set. Automatically set to 587 for you "
-            print O + "NOTE: SMTP has several ports for usage, including 25, 465, 587" + W
-            port = 587
-        print C + "[*] Port: %s "  % port + W
-        sleep(1)
-        print P + "[*] Starting dictionary attack! [*]" + W
-        print "Using %s seconds of delay. Default is 1 second" % delay
-        smtpBruteforce(address, username, wordlist, delay, port)
-
-    elif service == 'xmpp':
-        if address is None:
-            print R + "NOTE: You need to include a server address for cracking XMPP" + W
-            print O + "| For example: cypherpunks.it | inbox.im | creep.im |" + W
-        print C + "[*] XMPP server: %s" % address + W
-        sleep(0.5)
-        if port is None:
-            print O + "[?] Port not set. Automatically set to 5222 for you [?]"
-            port = 5222
-        print C + "Port: %s "  % port + W
-        sleep(1)
-        print P + "Starting dictionary attack! " + W
-        print "Using %s seconds of delay. Default is 1 second" % delay
-        xmppBruteforce(address, port, username, wordlist, delay)
-
-    elif service == 'twitter':
+elif service == 'twitter':
         if address or port:
             print R + "NOTE: You don't need to provide an address OR port for Twitter (LOL)" + W
             exit()
