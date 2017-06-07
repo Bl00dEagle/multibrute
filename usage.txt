@@ -1,8 +1,5 @@
-python multibrute.py -service [enter service here] -user [enter username here] -wlist [enter wordlist here] -delay [enter delay here]
+its in md5 as its funny as some people dont know what it it:
 
-services:
-facebook
-steam 
-instagram
-twitter
-[more coming soom as this is work in progress]
+0b261f0bb87e7ae433ec9be5eb6705fe
+
+959c5f8194ca49b10b3101ce6e6575c7
