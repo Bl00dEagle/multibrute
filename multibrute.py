@@ -26,7 +26,7 @@ def get_args():
     man_options = ['username', 'password']
     for m in man_options:
         if not args.__dict__[m]:
-            print R + "You have to specify a username AND a wordlist! [!]" + W
+            print R + "You have to specify a username AND a wordlist!" + W
             exit()
 
     service = args.service
