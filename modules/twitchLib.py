@@ -50,3 +50,5 @@ def twitchBruteforce(username, wordlist, delay):
         except AssertionError:
             print G + " Username: %s *  Password found: %s\n" % (username, password) + W
             sys.exit(0)
+            
+            #this isbeing written during a dislexic test
